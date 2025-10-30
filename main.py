@@ -11,12 +11,12 @@ from datetime import datetime, date, timezone
 
 
 SUBJECT_PHRASE = "Auto Glass Booked"
-GMAIL_ADDRESS  = "apatilglassdoctordfw@gmail.com"
-GMAIL_APP_PW   = "mvfgtidfegpgbbwo"
-GSPREAD_SHEET_ID = "17e--bcU21i_XPxTJarE7evf2eDiQzWwbuKrR-nCVpk8"
-GDRIVE_SA_JSON = r"C:\Users\Aayush Patil\Desktop\Daily Number Report\sheetsautomation-476714-3d5a94c2ed92.json"  # secret JSON string
-# Google Sheet that holds the mapping (two columns: names, category)
-GSPREAD_MAP_SHEET_ID = "1s60Pw4vDrQ4v97TQLBLwxlHmynOJSMm42OuSldN2W_w"
+
+GMAIL_ADDRESS        = os.getenv("GMAIL_ADDRESS")
+GMAIL_APP_PW         = os.getenv("GMAIL_APP_PW")
+GSPREAD_SHEET_ID     = os.getenv("GSPREAD_SHEET_ID")
+GDRIVE_SA_JSON       = os.getenv("GDRIVE_SA_JSON")   # can be full JSON or a path (your code already supports both)
+GSPREAD_MAP_SHEET_ID = os.getenv("GSPREAD_MAP_SHEET_ID")
 # optional: the tab name (default = first sheet)
 MAP_TAB_NAME = "Sheet1"
 
@@ -561,3 +561,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
