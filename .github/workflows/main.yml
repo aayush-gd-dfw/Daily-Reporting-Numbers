@@ -2,9 +2,10 @@ name: Daily Numbers Report
 
 on:
   schedule:
-    - cron: "25 21 * 3-11 *"   # 4:25 PM CDT (Mar–Nov)
-    - cron: "25 22 * 11-2 *"   # 4:25 PM CST (Nov–Feb)
-  workflow_dispatch:            # allow manual trigger
+    # Run at 4:25 PM Dallas time year-round
+    - cron: "25 21 * * *"   # 4:25 PM during CDT (Mar–Nov)
+    - cron: "25 22 * * *"   # 4:25 PM during CST (Nov–Mar)
+  workflow_dispatch:         # allow manual run
 
 jobs:
   run-script:
