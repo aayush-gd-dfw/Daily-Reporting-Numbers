@@ -3,7 +3,7 @@ name: Daily Numbers Report
 on:
   schedule:
     # Run at 4:25 PM Dallas time year-round
-    - cron: "25 21 * * *"   # 4:25 PM during CDT (Mar–Nov)
+
     - cron: "25 22 * * *"   # 4:25 PM during CST (Nov–Mar)
   workflow_dispatch:         # allow manual run
 
