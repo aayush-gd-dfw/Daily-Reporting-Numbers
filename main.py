@@ -3,12 +3,7 @@ from email.header import decode_header, make_header
 from openpyxl import load_workbook
 import gspread
 from google.oauth2.service_account import Credentials
-
-
 from datetime import datetime, date, timezone
-
-
-
 
 
 SUBJECT_PHRASE = "Auto Glass Booked"
